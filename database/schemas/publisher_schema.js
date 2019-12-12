@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Schema = mongoose.Schema();
+const Schema = mongoose.Schema;
 
 const PublisherSchema = new Schema({
     name: {
@@ -12,4 +12,4 @@ const PublisherSchema = new Schema({
     }
 });
 
-modules.export = PublisherSchema;
+module.exports = PublisherSchema;

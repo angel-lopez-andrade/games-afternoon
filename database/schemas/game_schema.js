@@ -12,9 +12,9 @@ const GameSchema = new Schema({
         enum: ["Platformer", "Shooter", "Fighting", "RPG"]
     },
     releaseYear: {
-        type: Integer
+        type: Number
     },
     publisher: [PublisherSchema]
 });
 
-modules.export = GameSchema;
+module.exports = GameSchema;
