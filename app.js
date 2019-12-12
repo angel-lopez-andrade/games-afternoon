@@ -7,7 +7,8 @@ const methodOverride = require("method-override");
 const app = express();
 
 mongoose.connect("mongodb://localhost/games_afternoon", {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 mongoose.Promise = global.Promise;
 mongoose.connection.on("error", (err) => console.log(err));
