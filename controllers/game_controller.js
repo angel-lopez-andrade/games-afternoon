@@ -11,12 +11,16 @@ async function newGame(req, res) {
 }
 
 async function create(req, res) {
-    let {name, genre, "release-year": releaseYear, publisher} = req.body;
+    console.log(req.body);
+    let {name, genre, "release-year": releaseYear, publisherName, publisherLocation} = req.body;
     let game = await GameModel.create({
         name,
         genre,
         releaseYear,
-        publisher
+        publisher: {
+            name: publisherName,
+            location: publisherLocation
+        }
     });
     res.redirect("/games");
 }

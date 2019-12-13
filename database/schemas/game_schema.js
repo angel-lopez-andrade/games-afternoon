@@ -14,7 +14,7 @@ const GameSchema = new Schema({
     releaseYear: {
         type: Number
     },
-    publisher: [PublisherSchema]
+    publisher: PublisherSchema
 });
 
 module.exports = GameSchema;
