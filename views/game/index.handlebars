@@ -1,4 +1,17 @@
 <h1>All Games</h1>
 {{#each games}}
-    <div>{{ this.name }}</div>
+    <div>
+        <p>Name: {{this.name}}</p>
+        <p>Genre: {{this.genre}}</p>
+        {{#if this.releaseDate}}
+            <p>Release Date: {{this.releaseDate}}</p>
+        {{else}}
+            <p>Release Date: N/A</p>
+        {{/if}}
+        {{#if this.publisher}}
+            <p>Publisher: {{this.publisher}}</p>
+        {{else}}
+            <p>Publisher: N/A</p>
+        {{/if}}
+    </div>
 {{/each}}

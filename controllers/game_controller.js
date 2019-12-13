@@ -5,8 +5,9 @@ async function index(req, res) {
     res.render("game/index", { games });
 };
 
-function newGame(req, res) {
-    res.render("game/new");
+async function newGame(req, res) {
+    let genres = await GameModel.schema.path("genre").enumValues;
+    res.render("game/new", { genres });
 }
 
 async function create(req, res) {

@@ -6,12 +6,19 @@
     </div>
     <div>
         <label for="genre">Genre</label>
+        <select>
+        {{#each genres}}
+            <option value="{{this}}">{{this}}</option>
+        {{/each}}
+        </select>
     </div>
     <div>
         <label for="release-year">Release Year</label>
+        <input type="number" name="release-year" id="release-year" min="1960" max="2019" />
     </div>
     <div>
         <label for="publisher">Publisher</label>
+        <input type="text" name="publisher" id="publisher" />
     </div>
     <div>
         <input type="submit" value="Create" />
