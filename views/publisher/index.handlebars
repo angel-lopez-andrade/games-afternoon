@@ -1,7 +1,9 @@
 <h1>All Publishers</h1>
 {{#each publishers}}
     <div>
-    <p>{{ this.name }}</p>
-    <p>{{ this.location }}</p>
+        {{#if this.publisher}}
+        <p>Name: {{ this.publisher.name }}</p>
+        <p>Location: {{ this.publisher.location }}</p>
+        {{/if}}
     </div>
 {{/each}}

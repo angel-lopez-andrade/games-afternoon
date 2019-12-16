@@ -9,9 +9,11 @@
             <p>Release Date: N/A</p>
         {{/if}}
         {{#if this.publisher}}
-            <p>Publisher: {{this.publisher}}</p>
+            <p>Publisher Name: {{this.publisher.name}}</p>
+            <p>Publisher Location: {{this.publisher.location}}</p>
         {{else}}
-            <p>Publisher: N/A</p>
+            <p>Publisher Name: N/A</p>
+            <p>Publisher Location: N/A</p>
         {{/if}}
     </div>
 {{/each}}

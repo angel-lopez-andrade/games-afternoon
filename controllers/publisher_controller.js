@@ -1,13 +1,10 @@
 const GameModel = require("../database/models/game_model");
 
 async function index(req, res) {
-    let publishers = await GameModel
-}
-
-function newPublisher(req, res) {
-    res.render("publisher/new");
+    let publishers = await GameModel.find().select("publisher");
+    res.render("publisher/index", { publishers });
 }
 
 module.exports = {
-    newPublisher
+    index
 };
